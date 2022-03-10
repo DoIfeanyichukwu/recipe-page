@@ -62,9 +62,263 @@ img {
 
 
 /* main section */
-
+.main-section {
+    position: relative;
+}
 /* yield */
-
+.yield {
+    margin-bottom: 30px;
+}
 .yield-list {
     list-style: none;
+}
+.yield-item {
+    /* display: flex; */
+}
+.yield-item + .yield-item {
+    display: inline-block;
+    margin-right: 8%;
+}
+.yield-item-one {
+    margin-bottom: 20px;
+}
+.yield-icon {
+    margin-right: 5px;
+}
+.yield-container {
+    display: flex;
+}.yield-item-info {
+    font-family: 'Montserrat';
+}
+.yield-item-info-p.sm {
+    font-size: 8px;
+    font-weight: 700;
+    line-height: var(--line-height, 9.75px);
+    color: #bdbdbd;
+}
+.yield-item-info-p.bg {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: var(--line-height, 12.19px);
+    color: #333;
+}
+
+
+.uppercase {
+    text-transform: uppercase;
+}
+.orange {
+    color: orange;
+}
+
+
+/* ingredients */
+.ingredients {
+    color: #333333;
+}
+.ingredients h2 {
+    font-family: 'Playfair Display';
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+    line-height: var(--line-height, 24px);
+    margin-bottom: 13px;
+}
+
+.ingredients > article + article {
+    margin-top: 39px;
+}
+
+.ingredients-text {
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: var(--line-height, 21px);
+    margin-bottom: 23px;
+}
+
+.ingredients-list {
+    list-style: none;
+}
+
+.ingredients-list-item + .ingredients-list-item {
+    margin-top: 10px;
+}
+
+
+.ingredients-item-label {
+    display: flex;
+    width: 100%;
+}
+.check {
+    width: 21px;
+    height: 21px;
+    margin-right: 9px;
+    border: 1px solid #828282;
+}
+.ingredients-item-label span {
+    flex: 1;
+    font-size: 14px;
+    line-height: var(--line-height, 25px);
+    font-family: 'Montserrat', serif;
+    font-weight: 400;
+}
+.cheesecake {
+    margin-bottom: 30px;
+}
+
+
+/* instructions */
+.instructions-main-text {
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: var(--line-height, 32px);
+    margin-bottom: 26px;
+}
+
+.instruction {
+    display: flex;
+    margin-bottom: 26px;
+}
+.instruction + .instruction {
+    margin-top: 25px;
+}
+
+.bg-orange {
+    color: #fff;
+    background-color: orange;
+    font-family: 'Playfair Display';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: var(--line-height, 32px);
+    border-radius: 6px;
+    width: 36px;
+    height: 36px;
+    display: block;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.instruction p {
+    flex: 1;
+    font-family: 'Montserrat', serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: var(--line-height, 24px);
+}
+
+
+/* source */
+.source {
+    font-family: 'Montserrat', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: var(--line-height, 150%);
+    color: #bdbdbd;
+    margin-bottom: 129px;
+}
+
+/* footer */
+.footer {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: var(--line-height, 17px);
+    text-align: center;
+    margin-block-end: 24px;
+    color: #828282;
+}
+
+.footer a {
+    color: inherit;
+}
+
+
+@media (min-width: 1440px)
+{
+    html {
+        max-width: 90rem;
+        margin: 0 auto;
+    }
+
+    .main {
+        max-width: 969px;
+        margin: 0 auto;
+    }
+
+    .showcase {
+        width: 969px;
+        height: 470px;
+    }
+
+    /* header */
+    .header-text {
+        font-size: 48px;
+        line-height: var(--line-height, 64px);
+        margin-top: 52px;
+    }
+    .quote {
+        font-size: 14px;
+        line-height: var(--line-height, 17px);
+    }
+
+    /* general */
+    .header, .main-section, .source {
+        width: 64%;
+    }
+
+    /* ingredients */
+    .ingredients h2 {
+        font-size: 24px;
+        line-height: var(--line-height, 32px);
+    }
+    .ingredients-text {
+        font-size: 18px;
+        line-height: var(--line-height, 24px);
+    }
+    .ingredients-item-label span {
+        font-size: 16px;
+        line-height: var(--line-height, 25px);
+    }
+
+    /* instructions */
+    .instructions-main-text {
+        font-size: 24px;
+    }
+
+    /* yield */
+    .yield {
+        position: absolute;
+        right: -350px;
+        border-radius: 12px;
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+        background: #fff;
+        padding: 2rem;
+    }
+
+    .yield-item + .yield-item {
+        display: block;
+        margin-right: 0;
+        margin-top: 43px;
+    }
+    .yield-item-one {
+        margin-bottom: 0px;
+    }
+
+    .yield-item-info-p.sm {
+        font-size: 10px;
+        margin-bottom: 4px;
+    }
+    .yield-item-info-p.bg {
+        font-size: 14px;
+        line-height: var(--line-height, 17px);
+    }
+
+    /* showcase */
+    .showcase {
+        margin-bottom: 48px;
+    }
 }
